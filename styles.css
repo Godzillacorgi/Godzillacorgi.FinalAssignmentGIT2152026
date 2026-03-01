@@ -1,0 +1,318 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+	--icy-blue: #2249d6;
+	--white: #ffff;
+	--dawn-yellow: #d4a415;
+	--morning-orange: #ab2d03;
+	--blk-gray: #292727;
+	--lite-gray: #c6ccc8;
+	--y-orange: #d68800;
+
+
+	--font: 'Montserrat', Arial, sans-serif;
+	--font-p: "'Avenir Next',monospace", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-p);
+    line-height: 1.6;
+    color: #222;
+    background-color: var(--white);
+	margin: 0;
+	padding: 0;
+}
+
+.display {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+
+}
+
+.swiss-val {
+    background-image: url("images/swiss-valley.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: var(--font);
+    margin: 0 0 10px 0;   
+    padding: 40px 0;
+	color: var(--icy-blue);
+}
+
+header h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header h1 a:hover {
+    color: var(--morning-orange);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--icy-blue);
+}
+
+nav a:hover {
+    color: var(--dawn-yellow);
+}
+
+.swiss-val {
+    order: -1; 
+}
+
+.swiss-val img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+main {
+    margin: 120px 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 20px;
+}
+
+main h2,
+main > p {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 1.8rem;
+	background-color: var(--icy-blue);  
+    padding: 15px 40px;
+    text-align: center;
+	margin: 0 auto -30px auto;
+	color: var(--white);
+}
+
+main > p {
+    max-width: 750px;
+	margin: 0 auto;
+}
+
+main section {
+    text-align: center;
+}
+
+main section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+main section h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+	text-align: center;
+	background-color: var(--icy-blue);
+    padding: 10px 40px;
+    margin: 15px 0;
+	display: inline-block;
+	color: var(--white);
+}
+
+main section p {
+    font-size: 1rem;
+	text-align: center;
+}
+
+.required {
+	color: red;
+	font-weight: bold;	
+}
+
+.contact {
+    margin: 120px 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact main {
+	display: flex;
+    flex-direction: column;
+	margin: 0;
+}
+
+.contact form {
+	align-self: start;
+	margin-top: 135px;
+}
+
+.swiss-sunset img {
+    width: 100%;
+    height: 500px;          
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;        
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--lite-gray);
+    font-size: 1rem;
+}
+
+form fieldset {
+    border: 2px solid var(--blk-gray);    
+    padding: 5px 6px;
+    margin-bottom: 10px;
+    background-color: var(--white);
+	display: flex;
+    align-items: center;
+    gap: 40px; 
+    flex-wrap: nowrap;   
+}
+
+form legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+form fieldset div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+	flex: 1;
+	justify-content: center;    
+}
+
+form input[type="radio"] {
+    width: auto;
+}
+
+form input:focus:invalid,
+form textarea:focus:invalid {
+    border: 2px solid red;
+    box-shadow: 0 0 6px red;
+}
+
+
+form input:required:valid,
+form textarea:required:valid {
+    border: 2px solid green;
+    box-shadow: 0 0 6px green;
+}
+
+form button {
+    display: block;           
+    margin: 30px auto 0 auto; 
+    padding: 14px 40px;       
+    font-size: 1.1rem;
+    font-weight: bold;
+	width: 100%;            
+    max-width: 500px;
+	background-color: var(--icy-blue);
+	color: var(--white);
+}
+
+form button:hover {
+	background-color: var(--y-orange);
+	color: var(--morning-orange);
+}
+
+footer {
+    background-color: var(--morning-orange);
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 1rem;
+    margin-top: 60px;
+	color: var(--white);
+}
+
+footer p {
+    margin: 5px 0;
+}
